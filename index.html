@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div id="game">
+        <header>
+            <h1>memory</h1>
+            <nav>
+                <button class="restart-btn menu-btn">Restart</button>
+                <button class="new-game-btn menu-btn">New Game</button>
+            </nav>
+        </header>
+        <div id="game-board"></div>
+        <div id="players"></div>
+    </div>
+    
+    <section id="menu-section">
+        <form action="#" method="POST" id="menu">
+            <div class="row">
+                <p>Number of Players</p>
+    
+                <div class="inputs-container">
+                    <input type="radio" id="one-player" name="number-of-players" value="1" checked>
+                    <label for="one-player">1</label>
+                    <input type="radio" id="two-players" name="number-of-players" value="2">
+                    <label for="two-players">2</label>
+                    <input type="radio" id="three-players" name="number-of-players" value="3">
+                    <label for="three-players">3</label>
+                    <input type="radio" id="four-players" name="number-of-players" value="4">
+                    <label for="four-players">4</label>
+                </div>
+            </div>
+            <div class="row">
+                <p>Grid Size</p>
+    
+                <div class="inputs-container">
+                    <input type="radio" name="grid-size" id="4x4" value="4" checked>
+                    <label for="4x4">4x4</label>
+                    <input type="radio" name="grid-size" id="6x6" value="6">
+                    <label for="6x6">6x6</label>
+                </div>
+            </div>
+            <div class="row">
+                <button type="submit" id="start-game-btn">Start Game</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="score-section-overlay">
+        <div class="score-section">
+            <h2>Congratulations Player <span id="winner">1</span></h2>
+            <small>You have an incredibly good memory</small>
+
+            <nav>
+                <button class="restart-btn menu-btn">Restart</button>
+                <button class="new-game-btn menu-btn">Setup New Game</button>
+            </nav>
+        </div>
+    </section>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
